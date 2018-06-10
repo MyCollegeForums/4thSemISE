@@ -4,7 +4,6 @@ int count=0,visitedorder[20],i,visited[20],queue[20];
 void main()
 {
         int n,a[20][20],j,source;
-// int count=0,visitedorder[20],i,visited[20];
         printf("Enter number of vertices: \n");
         scanf("%d",&n);
         printf("Enter the adjacency matrix: \n");
@@ -36,7 +35,6 @@ void bfs(int a[20][20],int n,int visitedorder[20],int source)
         queue[++r]=source;
         while(f<=r)
         {
-                //v=queue[f++];
                 u=queue[f++];
                 for(v=1; v<=n; v++)
                 {

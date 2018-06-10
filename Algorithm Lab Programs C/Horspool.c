@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-
 int table[128];
-
-void shiftTable( char pattern [])
+void shiftTable(char pattern [])
 {
         int i,j,m;
         m=strlen(pattern);
@@ -12,7 +10,6 @@ void shiftTable( char pattern [])
         for(j=0; j<m-1; j++)
                 table[pattern[j]]=m-1-j;
 }
-
 int horspool (char pattern[],char text[])
 {
         int i,k,m,n;
@@ -28,7 +25,7 @@ int horspool (char pattern[],char text[])
                 if(k==m)
                         return(i-m+1);
                 else
-                        i=i+table[text[i]];
+                        i+=table[text[i]];
         }
         return -1;
 }
@@ -46,3 +43,4 @@ void main()
         else
                 printf("found at position %d",flag);
 }
+  
